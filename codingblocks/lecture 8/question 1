@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    int y;
+    cin>>y;
+    for(int i=0;i<n;i++){
+        int x;
+        cin>>x;
+        arr[i]=x;
+    }
+    for(int i=0;i<n;i++){
+        if(arr[i]==y){
+            cout<<i;
+        }
+        else{
+            cout<<"-1";
+        }
+    }
+
+}
