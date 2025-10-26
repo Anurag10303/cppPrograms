@@ -47,7 +47,7 @@ int main() {
 		if (ds.findSet(u) != ds.findSet(v)) {
 			ds.unionSet(u, v);
 		} else {
-			// v and v are in the set i.e.
+			// u and v are in the set i.e.
 			//they are part of the same component
 			//which means there si already a path b/w
 			//them and now we've also ahve an edge
@@ -61,5 +61,8 @@ int main() {
 	} else {
 		cout << "cycle found" << endl;
 	}
+
+	// time: O(V+E) assuming op. on disjointSet take const time
+	// space : O(V) due to disjointSet (par & rank)
 	return 0;
 }
